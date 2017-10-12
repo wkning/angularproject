@@ -1,0 +1,35 @@
+.headerNav{
+	background-color: #282828;
+	height: 100px;
+	position: fixed;
+	left: 0;
+	right: 0;
+	color: #fff;
+	display: flex;
+	flex-direction:row;
+	justify-content: space-between;
+}
+.headerNav div h1{
+	font-size: 40px;
+	line-height: 100px;
+}
+.navLeftBg{
+	display: flex;
+	flex-direction:row; 
+}
+.navLeft{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-left: 20px;
+}
+.navLeft img{
+	height: 40px;
+	width: 40px;
+}
+.navRight{
+	display: flex;
+	margin-right: 20px;
+	font-size: 30px;
+	line-height: 100px;
+}

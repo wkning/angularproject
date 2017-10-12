@@ -1,0 +1,31 @@
+.loginCon{
+	top: 25%;
+	left: 25%;
+	margin: 0 auto;
+	width: 50%;
+	height: 600px;
+	position: absolute;
+	background-color: #333333;
+	color: white;
+	font-size: 20px;
+}
+.loginConBg{
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	background-color: #282828;
+}
+.header{
+	text-align: center;
+	margin-top:10%;
+}
+.header h1{
+	font-size: 50px;
+}
+.formCon{
+	width: 80%;
+	margin:0 auto;
+	margin-top: 7%;
+}

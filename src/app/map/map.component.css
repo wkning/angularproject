@@ -1,0 +1,10 @@
+.mapBg{
+	position: fixed;
+	top: 100px;
+	left: 400px;
+	bottom: 0;
+	right: 0;
+	background-color: cyan;
+	overflow: scroll;
+	border: 20px solid #f7f7f7;
+}

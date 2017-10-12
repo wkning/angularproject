@@ -1,0 +1,38 @@
+.leftbg{
+	width: 400px;
+	position: fixed;
+	top: 100px;
+	bottom: 0px;
+	background-color: #282828;
+	border-top: 1px solid #ccc;
+}
+.leftCon{
+	width: 90%;
+	margin: 5px auto;
+}
+.leftbg a{
+	text-decoration: none;
+	color: white;
+	font-size: 20px;
+}
+.headerToggle{
+	
+}
+img{
+	width: 28px;
+	height: 28px;
+}
+.accordionBg{
+	background-color: #282828;
+	border: none;
+	color: white;
+}
+.leftUl{
+	padding-left: 30px;
+}
+.leftLi{
+	padding: 10px 0;
+}
+.leftSpan{
+	margin-left: 20px;
+}
