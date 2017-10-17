@@ -1,3 +1,44 @@
 <div class="systemsBg">
-	systemsBg
+	 <div>
+	  <div style="display: block">
+	    <canvas baseChart
+	            [datasets]="barChartData"
+	            [labels]="barChartLabels"
+	            [options]="barChartOptions"
+	            legend="true"
+	            chartType="bar"
+	            >
+	    </canvas>
+	  </div>
+	</div>
+	<div>
+	  <div style="display: block">
+	    <canvas baseChart
+	            [datasets]="lineChartData"
+	            [labels]="barChartLabels"
+	            [options]="barChartOptions"
+	            legend="true"
+	            chartType="line"
+	            >
+	    </canvas>
+	  </div>
+	</div>
+	<div>
+	  <div style="display: block">
+	    <canvas baseChart
+	            [datasets]="lineChartData"
+	            [labels]="barChartLabels"
+	            [options]="barChartOptions"
+	            legend="true"
+	            chartType="pie"
+	            >
+	    </canvas>
+	  </div>
+	</div>
+	
+	<div class="row">
+		<div class="col-sm-12">
+			<echart [chartType]="pieEcharts" style="width:1000px;height:700px;"></echart>
+		</div>
+	</div>
 </div>

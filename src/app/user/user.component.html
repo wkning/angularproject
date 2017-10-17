@@ -1,3 +1,75 @@
 <div class="userBg">
-	
+	<router-outlet></router-outlet>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<div class="userBg">
+	<div class="userHeader">
+		<form class="form-inline">			
+			<div class="input-group input-group-lg" style="width:90%;">
+				<input type="text" class="form-control" style="height: 50px;">
+				<span class="input-group-btn">
+					<button class="btn btn-default" type="button" style="height: 50px;">
+						Go!
+					</button>
+				</span>
+			</div>
+			<button class="btn btn-success" style="height: 50px;" >创建用户</button>
+			<span (click)="addItem()" >123</span>
+		</form>
+		
+	</div>
+	<div class="userCon">
+		<table class="table table-bordered table-striped">
+		  <thead>
+		    <tr>
+		      	<th style="width: 70px;"><input type="checkbox" value="" /></th>
+		      	<th>序号</th>
+		      	<th>用户名</th>
+		      	<th>注册时间</th>
+		      	<th>最后登录</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		    <tr *ngFor="let item of userDatas; let i =index">
+		    	<td style="width: 70px; text-align: center"><input type="checkbox" value="" /></td>
+		      	<td>{{i+1}}</td>
+		      	<td>{{item.username}}</td>
+		      	<td>{{item.regtime}}</td>
+		      	<td>
+		      		<span>{{item.logintime}}</span>
+		      		<span (click)="edit(item.id)">编辑</span>
+		      		<span (click)="del(item.id)">删除</span>
+		      	</td>
+		    </tr>
+		  </tbody>
+		</table>
+	</div>	
+</div>-->

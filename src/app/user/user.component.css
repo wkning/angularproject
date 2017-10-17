@@ -2,9 +2,35 @@
 	position: fixed;
 	top: 100px;
 	left: 400px;
-	bottom: 0;
+	bottom: 150px;
 	right: 0;
-	background-color: cyan;
 	overflow: scroll;
 	border: 20px solid #f7f7f7;
+	border-bottom: none;
+	overflow-x:hidden;
+}
+.userHeader{
+	padding: 20px;
+	padding-bottom: 0;
+}
+.userCon{
+	padding: 20px;
+	padding-top: 0;
+}
+.userCon th,.userCon td{
+	height: 50px;
+	line-height: 50px;
+	font-size: 20px;
+}
+.userCon th{
+	text-align: center;
+}
+.userFooter{
+	position: fixed;
+	left: 400px;
+	bottom: 0;
+	right: 0;
+	height: 150px;
+	border: 20px solid #f7f7f7;
+	border-top: none;
 }

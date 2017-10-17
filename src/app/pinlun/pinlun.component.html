@@ -1,3 +1,21 @@
 <div class="pinlunBg">
-	pinlunBg
+	<div class="row">
+			<div class="col-sm-10">
+				<div class="input-group input-group-lg">
+					<input #gb class="form-control" type="text" pInputText size="50" placeholder="标题,作者">
+					<span class="input-group-btn">
+						<button class="btn btn-default" type="button">
+							<i class="fa fa-search"></i>
+							搜索
+						</button>
+					</span>
+				</div>				
+			</div>
+			<div class="col-sm-2">
+				<button class="btn btn-success" type="button" (click)="adduser()">
+					<i class="fa fa-user"></i>
+					发表文章
+				</button>				
+			</div>		
+		</div>
 </div>

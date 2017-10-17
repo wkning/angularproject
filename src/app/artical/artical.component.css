@@ -7,4 +7,5 @@
 	background-color: cyan;
 	overflow: scroll;
 	border: 20px solid #f7f7f7;
+	overflow-x:hidden;
 }

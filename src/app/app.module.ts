@@ -1,11 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {RouterModule} from '@angular/router';
-
-import {AppRoutes} from './app.routes'
+import { FormsModule } from '@angular/forms';
+import {HttpModule} from '@angular/http';
+import {AppRoutes} from './app.routes';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
+import {DataService} from './data.service';
 
 @NgModule({
   declarations: [
@@ -13,9 +15,9 @@ import { LoginComponent } from './login/login.component';
     LoginComponent
   ],
   imports: [
-    BrowserModule,RouterModule,RouterModule.forRoot(AppRoutes)
+    BrowserModule,FormsModule,HttpModule,RouterModule,RouterModule.forRoot(AppRoutes)
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -4,7 +4,33 @@
 	left: 400px;
 	bottom: 0;
 	right: 0;
-	background-color: cyan;
 	overflow: scroll;
+	overflow-x:hidden;
 	border: 20px solid #f7f7f7;
+	padding: 20px;
 }
+.listHeader{
+	font-size: 36px;
+	padding: 20px;
+	color: #999;
+}
+.listBgL{
+	height: 500px;
+	border: 1px solid #ccc;
+	margin-left: 20px;
+	overflow: scroll;
+	overflow-x:hidden;
+}
+.listBgR{
+	height: 500px;
+	margin-right: 20px;
+}
+.organzieBg input{
+	height: 50px;
+}
+.organzieBg button{
+	height: 50px;
+	width: 80px;
+}
+
+

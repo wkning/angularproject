@@ -4,7 +4,16 @@
 	left: 400px;
 	bottom: 0;
 	right: 0;
-	background-color: cyan;
 	overflow: scroll;
 	border: 20px solid #f7f7f7;
+	overflow-x:hidden;
+	padding-right: 50px;
+	padding-top: 100px;
+	font-size: 20px;
+}
+.partBg input{
+	height: 50px;
+}
+.partCon{
+	padding-bottom: 40px;
 }

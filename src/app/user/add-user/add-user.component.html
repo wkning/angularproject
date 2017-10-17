@@ -1,0 +1,65 @@
+<div style="padding: 30px;" class="adduserBG">
+<form class="form-horizontal" role="form" #myForm = "ngForm" id="myForm" enctype="multipart/form-data">
+	<div class="form-group">
+    <label for="pig" class="col-sm-2 control-label"><b>头像：</b></label>
+    <div class="col-sm-10">
+      <input type="file" class="form-control"  id="pig" name="pig">
+    </div>
+  </div>
+	<div class="form-group">
+    <label for="username" class="col-sm-2 control-label"><b>用户名：</b></label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" #name="ngModel" id="username" required="required" [(ngModel)]="user.username" name="username" placeholder="请输入用户名">
+    </div>
+  </div>
+   <!-- <pre>{{username.valid|json}}</pre>-->
+  <div *ngIf="name.invalid && name.dirty" class="alert alert-danger col-sm-offset-2">
+		<div *ngIf="name.errors.required">用户名不能为空</div>
+		<div *ngIf="name.errors.minlength">用户名的长度必须大于等于6位</div>	
+		<div *ngIf="name.errors.pattern">用户名必须为数字字母下划线</div>	
+	</div>
+
+
+  <div class="form-group">
+    <label for="email" class="col-sm-2 control-label"><b>常用邮箱：</b></label>
+    <div class="col-sm-10">
+      <input type="email" class="form-control" required="required" [(ngModel)]="user.email" id="email" #email1="ngModel" name="email" placeholder="请输入邮箱地址" pattern="^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$">
+    </div>
+  </div>
+  <div *ngIf="email1.invalid && email1.dirty" class="alert alert-danger col-sm-offset-2">
+  		<div *ngIf="email1.errors.required">邮箱不能为空</div>
+		<div *ngIf="email1.errors.pattern">请输入正确的邮箱格式:xx@xx.xx</div>	
+	</div>
+  <div class="form-group">
+    <label for="password" class="col-sm-2 control-label"><b>密码：</b></label>
+    <div class="col-sm-10">
+      <input type="password" class="form-control" #pass="ngModel" required="required" [(ngModel)]="user.password" id="password" name="password" placeholder="请输入密码" pattern="^[a-zA-Z]{1}([a-zA-Z0-9]|[._]){7,19}$">
+    </div>
+  </div>
+   	<div *ngIf="pass.invalid && pass.dirty" class="alert alert-danger col-sm-offset-2">
+		<div *ngIf="pass.errors.required">密码不能为空</div>
+		<div *ngIf="pass.errors.pattern">密码只能输入8-20个以字母开头、可带数字、“_”、“.”的字串</div>	
+	</div>
+  <div class="form-group">
+    <label for="password2" class="col-sm-2 control-label"><b>重复密码：</b></label>
+    <div class="col-sm-10">
+      <input type="password" class="form-control" #pass1="ngModel" required="required" [(ngModel)]="user.password2" id="password2" name="password2" placeholder="重复密码">
+    </div>
+  </div>
+  <div *ngIf="user.password2!=user.password&&pass1.dirty" class="alert alert-danger col-sm-offset-2">两次密码输入不一样</div>
+  
+  <div class="form-group">
+    <label for="profile" class="col-sm-2 control-label"><b>个人简介：</b></label>
+    <div class="col-sm-10">
+      	<textarea class="form-control" rows="3" required="required" id="profile" name="profile" [(ngModel)]="user.profile"  placeholder="个人简介,最多140字,不能是链接"></textarea>
+    </div>
+  </div>
+  
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+    	<!--{{myForm.form.valid}}-->
+      <button type="button" [disabled]="!myForm.form.valid" class="btn btn-success" (click)="adduser()">保存</button>
+    </div>
+  </div>
+</form>
+</div>

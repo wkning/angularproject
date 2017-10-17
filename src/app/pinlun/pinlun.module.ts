@@ -5,9 +5,11 @@ import { PinlunComponent } from './pinlun.component';
 import {RouterModule} from '@angular/router';
 import {pinlunRoutes} from './pinlun.routes';
 
+import {DataTableModule,SharedModule} from 'primeng/primeng';
+
 @NgModule({
   imports: [
-    CommonModule,RouterModule,RouterModule.forChild(pinlunRoutes)
+    CommonModule,RouterModule,RouterModule.forChild(pinlunRoutes),DataTableModule,SharedModule
   ],
   declarations: [PinlunComponent]
 })
