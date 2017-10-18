@@ -1,19 +1,22 @@
 import { Component, OnInit } from '@angular/core';
 import {DataService} from '../data.service';
 import {Router} from '@angular/router';
+import {flyIn} from '../animation/fly-in';
 
 @Component({
   selector: 'app-part',
   templateUrl: './part.component.html',
-  styleUrls: ['./part.component.css']
+  styleUrls: ['./part.component.css'],
+  animations:[flyIn]
 })
 export class PartComponent implements OnInit {
-private email:string;	
-private user:string;
-private pwd:any;
-private headerpig:string;
-private shuju:any;
-  constructor(private datas:DataService,private router:Router) { }
+private userList:any=[
+			{"index":"1","username":"发海景房","regtime":"按时发放","logintime":"按方法嘎嘎嘎"},
+			{"index":"2","username":"发顺丰","regtime":"发声方法","logintime":"按方法嘎嘎嘎"},
+			{"index":"3","username":"按方法嘎嘎嘎","regtime":"按方法嘎嘎嘎","logintime":"按方法嘎嘎嘎"},
+			{"index":"4","username":"按方法嘎嘎嘎","regtime":"按方法嘎嘎嘎","logintime":"按方法嘎嘎嘎"}
+			]
+  constructor() { }
 
   ngOnInit() {
   	

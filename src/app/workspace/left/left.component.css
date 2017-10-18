@@ -1,5 +1,5 @@
 .leftbg{
-	width: 400px;
+	width:17%;
 	position: fixed;
 	top: 100px;
 	bottom: 0px;
@@ -35,4 +35,7 @@ img{
 }
 .leftSpan{
 	margin-left: 20px;
+}
+.selStyle{
+	color: red;
 }

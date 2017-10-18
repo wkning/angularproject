@@ -3,11 +3,13 @@ import {DataService} from '../../data.service';
 import { User } from '../../models/user-model';
 import {Router,ActivatedRoute,Params} from '@angular/router';
 import {Observable} from 'rxjs/Observable';
+import {flyIn} from '../../animation/fly-in';
 
 @Component({
   selector: 'app-add-user',
   templateUrl: './add-user.component.html',
   styleUrls: ['./add-user.component.css'],
+  animations:[flyIn]
 })
 export class AddUserComponent implements OnInit {
 private user: User = new User();

@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import {flyIn} from '../animation/fly-in';
 
 @Component({
   selector: 'app-organzie',
   templateUrl: './organzie.component.html',
-  styleUrls: ['./organzie.component.css']
+  styleUrls: ['./organzie.component.css'],
+  animations:[flyIn]
 })
 export class OrganzieComponent implements OnInit {
 private orgName:string;
@@ -133,6 +135,37 @@ private orgTree = [
 		}
 	}
 	del(){
-		console.log(3)
+		var arr=[]
+		for(var delitem of this.orgTree){
+			this.selectedNode=delitem;
+			if(this.selectedName.node.label!==this.selectedNode.label){
+				arr.push(this.selectedNode)
+			}
+			if(this.selectedNode.children){
+				var arr1=[];
+				for(var delitem1 of this.selectedNode.children){
+					this.selectedNode=delitem1;
+					if(this.selectedName.node.label!==this.selectedNode.label){
+						arr1.push(this.selectedNode);
+					}
+					if(this.selectedNode.children){
+						var arr2=[];
+						for(var delitem3 of this.selectedNode.children){
+							this.selectedNode=delitem3;
+							if(this.selectedName.node.data==this.selectedNode.data){
+								
+							}else{
+								arr2.push(this.selectedNode);
+							}
+						}
+					}
+				}
+				for(var delitem2 of arr){
+					delitem2.children=arr1
+				}
+			}
+			
+		}
+		this.orgTree=arr;
 	}
 }

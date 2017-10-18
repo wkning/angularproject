@@ -7,32 +7,32 @@
 								<div style="margin: 10px 0;">
 									<span><img src="../../../assets/img/主页.png"/></span>
 									<span style="margin-left:20px;">权限管理</span>
-									<span style="margin-left:180px;"><img src="../../../assets/img/箭头.png"/></span>
+									<span style="float:right;"><img src="../../../assets/img/箭头.png"/></span>
 								</div>
 							</a>
 					</div>
 					<div id="collapseOne" class="panel-collapse collapse in">
 						<div class="panel-body">
-							<ul class="leftUl">
-								<li class="leftLi">
+							<ul class="leftUl"> 
+								<li class="leftLi" (click)="selectNode()" [style.background-color] = "'/workspace/zhuzhi'==select ? 'cyan': '#282828'">
 									<a  href="javascript:void(0);" routerLink="zhuzhi" >
 										<span><img src="../../../assets/img/男人.png"/></span>
-										<span class="leftSpan">组织架构</span>
+										<span class="leftSpan" >组织架构</span>
 									</a>
 								</li>
-								<li class="leftLi">
+								<li class="leftLi" (click)="selectNode()" [style.background-color] = "'/workspace/user/userlist'==select ? 'cyan': '#282828'">
 									<a  href="javascript:void(0);" routerLink="user" >
 										<span><img src="../../../assets/img/虫子.png"/></span>
 										<span class="leftSpan">用户管理</span>
 									</a>
 								</li>
-								<li class="leftLi">
+								<li class="leftLi" (click)="selectNode()" [style.background-color] = "'/workspace/part'==select ? 'cyan': '#282828'">
 									<a  href="javascript:void(0);" routerLink="part" >
 										<span><img src="../../../assets/img/公交.png"/></span>
 										<span class="leftSpan">角色管理</span>
 									</a>
 								</li>
-								<li class="leftLi">
+								<li class="leftLi" (click)="selectNode()" [style.background-color] = "'/workspace/permission'==select ? 'cyan': '#282828'">
 									<a  href="javascript:void(0);" routerLink="permission" >
 										<span><img src="../../../assets/img/纸飞机.png"/></span>
 										<span class="leftSpan">权限管理</span>
@@ -50,20 +50,20 @@
 								<div style="margin: 10px 0;">
 									<span><img src="../../../assets/img/魔法棒.png"/></span>
 									<span style="margin-left:20px;">内容管理</span>
-									<span style="margin-left:180px;"><img src="../../../assets/img/箭头.png"/></span>
+									<span style="float:right;"><img src="../../../assets/img/箭头.png"/></span>
 								</div>
 							</a>
 					</div>
 					<div id="collapseTwo" class="panel-collapse collapse">
 						<div class="panel-body">
 							<ul class="leftUl">
-								<li class="leftLi">
+								<li class="leftLi" (click)="selectNode()" [style.background-color] = "'/workspace/articals'==select ? 'cyan': '#282828'">
 									<a  href="javascript:void(0);" routerLink="articals" >
 										<span><img src="../../../assets/img/手机.png"/></span>
 										<span class="leftSpan">文章管理</span>
 									</a>
 								</li>
-								<li class="leftLi">
+								<li class="leftLi" (click)="selectNode()" [style.background-color] = "'/workspace/pinlun'==select ? 'cyan': '#282828'">
 									<a  href="javascript:void(0);" routerLink="pinlun" >
 										<span><img src="../../../assets/img/横.png"/></span>
 										<span class="leftSpan">评论管理</span>
@@ -81,20 +81,20 @@
 								<div style="margin: 10px 0;">
 									<span><img src="../../../assets/img/扳手.png"/></span>
 									<span style="margin-left:20px;">系统监控</span>
-									<span style="margin-left:180px;"><img src="../../../assets/img/箭头.png"/></span>
+									<span style="float:right;"><img src="../../../assets/img/箭头.png"/></span>
 								</div>
 							</a>
 					</div>
 					<div id="collapseThree" class="panel-collapse collapse ">
 						<div class="panel-body">
 							<ul class="leftUl">
-								<li class="leftLi">
+								<li class="leftLi" (click)="selectNode()" [style.background-color] = "'/workspace/systems'==select ? 'cyan': '#282828'">
 									<a  href="javascript:void(0);" routerLink="systems" >
 										<span><img src="../../../assets/img/折线图.png"/></span>
 										<span class="leftSpan">系统状态</span>
 									</a>
 								</li>
-								<li class="leftLi">
+								<li class="leftLi" (click)="selectNode()" [style.background-color] = "'/workspace/map'==select ? 'cyan': '#282828'">
 									<a  href="javascript:void(0);" routerLink="map" >
 										<span><img src="../../../assets/img/定位.png"/></span>
 										<span class="leftSpan">百度地图</span>

@@ -9,16 +9,29 @@
 	</div>
 	<div class="navRight">
 		<span style="margin-right:20px;">123</span>
-		<span style="margin-right:50px;"><img src="../../../favicon.ico"/></span>
+		<span style="margin-right:20px;"><img src="../../../favicon.ico"/></span>
+		<span style="margin-right:50px;" (click)="isShow()">
+		<img src="../../../assets/img/箭头.png"/>
+		</span>
 	</div>
 </div>
-<div class="btn-group" style="position: fixed; right: 20px; top: 35px; z-index: 2;">
-	<span type="button"  data-toggle="dropdown">
-		<img src="../../../assets/img/箭头.png"/>
-	</span>
-	<ul class="dropdown-menu dropdown-menu-right" role="menu">
-		<li style="width: 200px;"><a href="#">功能</a></li>
-		<li><a href="#">另一个功能</a></li>
-		<li><a href="#">其他</a></li>
+<div class="btn-group" style="position: fixed; right: 20px; top: 100px; z-index: 2; overflow: hidden;">
+	<ul class="nveul" *ngIf="show" [@signal]="signal">
+		<li><a href="#">
+			<span style="margin-left: 10px;"><img src="../../../assets/img/我的.png"/></span>
+			<span style="margin-left: 20px;">用户资料</span>
+		</a></li>
+		<li><a href="#">
+			<span style="margin-left: 10px;"><img src="../../../assets/img/设置.png"/></span>
+			<span style="margin-left: 20px;">个人设置</span>
+		</a></li>
+		<li><a href="#">
+			<span style="margin-left: 10px;"><img src="../../../assets/img/消息.png"/></span>
+			<span style="margin-left: 20px;">消息</span>
+		</a></li>
+		<li (click)="close()"><a href="#">
+			<span style="margin-left: 10px;"><img src="../../../assets/img/退出.png"/></span>
+			<span style="margin-left: 20px;">退出</span>
+		</a></li>
 	</ul>
 </div>

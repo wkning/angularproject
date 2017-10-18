@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-left',
@@ -6,10 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./left.component.css']
 })
 export class LeftComponent implements OnInit {
-
-  constructor() { }
+private select:any="/workspace/user/userlist";
+  constructor(private router:Router) { }
 
   ngOnInit() {
+  	
   }
-
+	selectNode(val){
+		this.select=this.router.url;
+	}
 }

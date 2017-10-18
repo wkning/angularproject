@@ -1,23 +1,25 @@
 <div class="organzieBg">
-	<div class="listHeader">组织架构</div>
-	<div class="row">
-		<div class="col-sm-6">
-			<p-tree [value]="orgTree" selectionMode="single" [(selection)]="selectedFile" (onNodeSelect)="nodeSelect($event)"></p-tree>
-		</div>
-		<div class="col-sm-6">
-			<form >
-				<div class="form-group input-group-lg">
-					<label>名称</label>
-					<input  type="text" class="form-control" name="orgname" pInputText [(ngModel)]="orgName" />
-				</div>
-				<div class="form-group input-group-lg">
-					<label>代码</label>
-					<input  type="text" class="form-control" name="orgcode" pInputText [(ngModel)]="orgCode" />				
-				</div>
-			</form>
-			<button type="submit" class="btn btn-lg btn-primary" (click)="edit()">编辑</button>
-			<button type="submit" class="btn btn-lg  btn-success" (click)="add()">新建</button>
-			<button type="submit" class="btn btn-lg  btn-danger" (click)="del()">删除</button>
+	<div [@flyIn] = "flyIn">
+		<div class="listHeader">组织架构</div>
+		<div class="row">
+			<div class="col-sm-6">
+				<p-tree [value]="orgTree" selectionMode="single" [(selection)]="selectedFile" (onNodeSelect)="nodeSelect($event)"></p-tree>
+			</div>
+			<div class="col-sm-6">
+				<form >
+					<div class="form-group input-group-lg">
+						<label>名称</label>
+						<input  type="text" class="form-control" name="orgname" pInputText [(ngModel)]="orgName" />
+					</div>
+					<div class="form-group input-group-lg">
+						<label>代码</label>
+						<input  type="text" class="form-control" name="orgcode" pInputText [(ngModel)]="orgCode" />				
+					</div>
+				</form>
+				<button type="submit" class="btn btn-lg btn-primary" (click)="edit()">编辑</button>
+				<button type="submit" class="btn btn-lg  btn-success" (click)="add()">新建</button>
+				<button type="submit" class="btn btn-lg  btn-danger" (click)="del()">删除</button>
+			</div>
 		</div>
 	</div>
 </div>
